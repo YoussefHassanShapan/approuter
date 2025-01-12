@@ -1,0 +1,16 @@
+{
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/backend/(.*)$",
+      "target": "/$1",
+      "destination": "backend-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false,
+      "service": "sap-approuter-userapi"
+    }
+  ],
+  "login": {
+    "callbackEndpoint": "/login/callback"
+  }
+}

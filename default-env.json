@@ -1,0 +1,10 @@
+{
+    "destinations": [
+      {
+        "name": "backend-api",
+        "url": "https://btpsd.cfapps.us10-001.hana.ondemand.com",
+        "forwardAuthToken": true
+      }
+    ]
+  }
+  

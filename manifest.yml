@@ -1,0 +1,18 @@
+---
+applications:
+  - name: approuter-app
+    buildpacks:
+      - nodejs_buildpack
+    memory: 1G
+    command: npm start
+    services:
+      - name: xsuaa-authn
+    env:
+      destinations: >
+        [
+            {
+                 "name": "backend-api",
+                 "url": "https://btpsd.cfapps.us10-001.hana.ondemand.com",
+                 "forwardAuthToken": true
+             }
+        ]
